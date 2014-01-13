@@ -6,6 +6,7 @@
 var express = require('express')
   , routes = require('./routes')
   , user = require('./routes/user')
+  , compose = require('./routes/compose')
   , http = require('http')
   , path = require('path')
   , flash = require('connect-flash')
@@ -39,6 +40,7 @@ if ('development' == app.get('env')) {
 /*
  * Passport Local strategy
  */
+
 passport.use(new LocalStrategy(
   function(username, password, done) {
     var user = { id: 123, username: "admin@tippler.com", password: "letmein" };
@@ -73,7 +75,9 @@ function ensureAuthenticated(req, res, next) {
  * routes
  */
 
-app.get('/', ensureAuthenticated, routes.index);
+app.get('/', ensureAuthenticated, routes.outbox); // outbox - index.js
+app.get('/compose', ensureAuthenticated, compose.index);
+
 app.get('/login', user.login);
 
 // POST login
@@ -82,12 +86,17 @@ app.post('/login',
                                    failureRedirect: '/login',
                                    failureFlash: true })
 );
-
 // Logout
 app.get('/logout', function(req, res){
   req.logout();
   res.redirect('/login');
 });
+
+
+
+/*
+ * Create Server
+ */
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

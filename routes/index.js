@@ -1,8 +1,8 @@
 
 /*
- * GET home page.
+ * GET outbox page.
  */
 
-exports.index = function(req, res){
+exports.outbox = function(req, res){
   res.render('index', { title: 'Tippler', nav: 'outbox' });
 };

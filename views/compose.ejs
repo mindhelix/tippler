@@ -1,0 +1,30 @@
+<%- include header.ejs %>
+    
+    <div class="container">
+      <div class="row">
+        <nav class="col-md-2 col-lg-2">
+          <%- include sidebar.ejs %>
+        </nav><!-- .nav -->
+        <section class="col-md-10 col-lg-10">
+          <!-- content goes here -->
+          <h2>New Mail</h2>
+          
+          <form role="form">
+            <div class="form-group">
+              <label for="emailMsg">Message</label>
+              <textarea class="form-control" rows="7" placeholder="Create content with markdown"></textarea>
+              <p class="help-block">
+                Tippler uses the <a href="http://daringfireball.net/projects/markdown/syntax" target="_blank">
+                  Daring Fireball <span class="glyphicon glyphicon-link"></span></a> markdown format.
+              </p>
+            </div>
+            <div class="form-group">
+              <label for="info">This mail will be send to 7589 subscribed Sentinel users.</label>
+            </div>
+            <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-send"></span> Send</button>
+          </form>
+        </section><!-- .section -->
+      </div><!-- .row -->
+    </div><!-- .container -->
+    
+<%- include footer.ejs %>
