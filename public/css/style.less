@@ -1,0 +1,146 @@
+/* Tippler less styles */
+
+
+/* 
+ * variables 
+ */
+
+@baseColor: #3498DB; /* blue */
+@highlightColor: #2980B9; /* dark blue */
+@fontColor: #fff;
+
+@asphalt: #34495E;
+@darkAsphalt: #2C3E50;
+
+@fontBold: 'blokletters_viltstifviltstift', Arial, Helvetica, sans-serif;
+@fontReg: 'blokletters_balpenbalpen', Arial, Helvetica, sans-serif;
+@fontThin: 'blokletters_potloodpotlood', Arial, Helvetica, sans-serif;
+
+body {
+  height: 100%;
+  background-color: @baseColor;
+  color: @fontColor;
+  font-family: @fontThin;
+  font-size: 13px;
+}
+
+h2 {
+  font-family: @fontReg;
+  font-size: 27px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.container section {
+  padding-left: 30px;
+}
+
+a, a:visited {
+  font-family: @fontReg;
+  color: @asphalt;
+}
+
+a:hover, a:focus, a:active {
+  color: @darkAsphalt;
+}
+
+.btn, .btn:active, .btn:focus {
+  background-color: @baseColor;
+  border: 1px solid @fontColor;
+  font-family: @fontReg;
+  color: @fontColor;
+  font-size: 14px;
+}
+
+.btn:hover {
+  background-color: @highlightColor;
+  color: @fontColor;
+  border: 1px solid @fontColor;
+}
+
+
+/* 
+ * header/branding 
+ */
+
+header {
+  color: @fontColor;
+  margin: 20px 50px;
+}
+
+header h1 { font-family: @fontBold; }
+
+header p { 
+  font-family: @fontThin;  
+  margin-left: 25px;
+}
+
+
+/* 
+ * sidebar
+ */
+
+.sidebar { 
+  list-style: none;
+  margin: 0; 
+  padding: 0; 
+  border-right: 3px solid @highlightColor;
+  width: 180px;
+}
+
+.sidebar li { 
+  text-indent: 0; 
+  margin-bottom: 10px; 
+  padding-right: 20px; 
+  font-family: @fontReg;
+  font-size: 14px;
+}
+
+.sidebar li a { color: @fontColor; display: block; }
+.sidebar li a:hover { text-decoration: none; font-style: italic; }
+
+.sidebar li a span { font-size: 28px; vertical-align: middle; margin-right: 10px; }
+
+.sidebar li.active a { text-decoration: line-through; font-style: italic; }
+
+
+/*
+ * outbox 
+ */
+
+.table thead { font-family: @fontReg; }
+.table tbody tr:hover { font-style: italic; cursor: pointer; }
+
+
+/*
+ * compose
+ */
+
+.help-block { font-family: @fontThin; color: @fontColor; font-size: 11px; }
+
+
+/* 
+ * unsubscribed
+ */
+
+.list-group { width: 570px; }
+
+.list-group a { background-color: @baseColor; }
+.list-group a:hover { background-color: @baseColor; font-style: italic; }
+
+.list-group a h4.list-group-item-heading { font-family: @fontReg; color: @fontColor; font-size: 14px; }
+
+.list-group a p.list-group-item-text { font-family: @fontThin; color: @fontColor; font-size: 12px; }
+
+.list-group a p.list-group-item-text span { font-size: 10px; }
+
+/*
+ * footer
+ */
+
+footer {
+  opacity: 0.4;
+  color: @fontColor;
+  font-family: @fontThin;
+  font-size: 11px;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- fonts -->
+    <link rel="stylesheet" href="fonts/blokletters_regular/stylesheet.css">
+    <link rel="stylesheet" href="fonts/blokletters_bold/stylesheet.css">
+    <link rel="stylesheet" href="fonts/blokletters_thin/stylesheet.css">
+    
+    <link rel="stylesheet" href="css/login.css" type="text/css" media="screen" charset="utf-8">
+  
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- branding -->
+    <header>
+      <h1>Tippler</h1>
+      <p>Sentinel Mails</p>
+    </header>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-7 col-lg-offset-7 col-md-4 col-lg-4">
+          <div class="login-box">
+            <h2>Sign in</h2>
+            <form role="form" action="/login" method="post">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" name="username" placeholder="Enter email">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" name="password" placeholder="Password">
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> Remember me
+                </label>
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+          </div><!-- .login-box -->
+        </div><!-- col-* -->
+      </div><!-- .row -->
+    </div><!-- .container -->
+    
+    <!-- footer -->
+    <footer class="navbar navbar-fixed-bottom">
+      <p class="navbar-text">&copy; 2014 Mindhelix Technosol Pvt. Ltd.</p>
+    </footer>
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

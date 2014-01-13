@@ -1,0 +1,104 @@
+/* Tippler login page less styles */
+
+
+/* 
+ * variables 
+ */
+
+@baseColor: #3498DB; /* blue */
+@highlightColor: #2980B9; /* dark blue */
+@fontColor: #fff;
+
+@asphalt: #34495E;
+@darkAsphalt: #2C3E50;
+
+@fontBold: 'blokletters_viltstifviltstift', Arial, Helvetica, sans-serif;
+@fontReg: 'blokletters_balpenbalpen', Arial, Helvetica, sans-serif;
+@fontThin: 'blokletters_potloodpotlood', Arial, Helvetica, sans-serif;
+
+
+body {
+  height: 100%;
+  color: @fontColor;
+  font-family: @fontThin;
+  font-size: 13px;
+  background-color: #f2f2f2; /* fail safe */
+  background: url(../images/splash.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+h2 {
+  font-family: @fontReg;
+  font-size: 27px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.container section {
+  padding-left: 30px;
+}
+
+a, a:visited {
+  font-family: @fontReg;
+  color: @asphalt;
+}
+
+a:hover, a:focus, a:active {
+  color: @darkAsphalt;
+}
+
+.btn, .btn:active, .btn:focus {
+  background-color: @baseColor;
+  border: 1px solid @fontColor;
+  font-family: @fontReg;
+  color: @fontColor;
+  font-size: 14px;
+}
+
+.btn:hover {
+  background-color: @highlightColor;
+  color: @fontColor;
+  border: 1px solid @fontColor;
+}
+
+
+/* 
+ * header/branding 
+ */
+
+header {
+  color: @fontColor;
+  margin: 20px 50px;
+}
+
+header h1 { font-family: @fontBold; text-shadow: 0 0 5px #ccc; }
+
+header p { 
+  font-family: @fontReg;  
+  margin-left: 25px;
+  text-shadow: 0 0 3px #ccc;
+}
+
+
+/*
+ * login-box
+ */
+
+.login-box {
+  background-color: @baseColor;
+  opacity: 0.9;
+  border-radius: 7px;
+  padding: 15px;
+}
+
+
+/*
+ * footer
+ */
+
+footer {
+  opacity: 0.4;
+  color: @fontColor;
+  font-family: @fontThin;
+  font-size: 11px;
+}
