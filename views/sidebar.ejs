@@ -1,7 +1,17 @@
 <ul class="sidebar">
-  <li class="active"><a href="#"><span class="glyphicon glyphicon-inbox"></span>Outbox</a></li>
-  <li><a href="#"><span class="glyphicon glyphicon-edit"></span>Compose</a></li>
-  <li><a href="#"><span class="glyphicon glyphicon-thumbs-down"></span>Unsubscribed</a></li>
-  <li><a href="#"><span class="glyphicon glyphicon-wrench"></span>Settings</a></li>
-  <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+  <li <% if(nav == 'outbox') { %> class="active" <% } %>>
+    <a href="/"><span class="glyphicon glyphicon-inbox"></span>Outbox</a>
+  </li>
+  <li <% if(nav == 'compose') { %> class="active" <% } %>>
+    <a href="/compose"><span class="glyphicon glyphicon-edit"></span>Compose</a>
+  </li>
+  <li <% if(nav == 'unsubscribed') { %> class="active" <% } %>>
+    <a href="/unsubscribed"><span class="glyphicon glyphicon-thumbs-down"></span>Unsubscribed</a>
+  </li>
+  <li <% if(nav == 'settings') { %> class="active" <% } %>>
+    <a href="/settings"><span class="glyphicon glyphicon-wrench"></span>Settings</a>
+  </li>
+  <li>
+    <a href="/logout"><span class="glyphicon glyphicon-log-out"></span>Logout</a>
+  </li>
 </ul>
