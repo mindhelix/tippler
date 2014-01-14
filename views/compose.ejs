@@ -9,22 +9,62 @@
           <!-- content goes here -->
           <h2>New Mail</h2>
           
-          <form role="form">
+          <form id="fm-compose" role="form" action="/compose" method="post">
             <div class="form-group">
               <label for="emailMsg">Message</label>
-              <textarea class="form-control" rows="7" placeholder="Create content with markdown"></textarea>
+              <textarea class="form-control" rows="7" name="mailmsg" placeholder="Create content with markdown"></textarea>
               <p class="help-block">
                 Tippler uses the <a href="http://daringfireball.net/projects/markdown/syntax" target="_blank">
                   Daring Fireball <span class="glyphicon glyphicon-link"></span></a> markdown format.
               </p>
             </div>
             <div class="form-group">
-              <label for="info">This mail will be send to 7589 subscribed Sentinel users.</label>
+              <div class="sucess alert alert-success hide">
+                <strong>Well done!</strong> Mail send to all Sentinel users.
+              </div>
+              <div class="fail alert alert-danger hide">
+                <strong>Oh snap!</strong> Change a few things up and try submitting again.
+              </div>
             </div>
-            <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-send"></span> Send</button>
+            <button type="submit" class="btn btn-default" data-loading-text="Sending...">
+              <span class="glyphicon glyphicon-send"></span> Send
+            </button>
           </form>
         </section><!-- .section -->
       </div><!-- .row -->
     </div><!-- .container -->
+    
+    
+    <%- include scripts.ejs %>
+    <!-- 
+      compose scripts 
+    -->
+    <script>
+      $(document).ready(function() {
+        
+        /*
+         * POST to compose email
+         */
+        
+        $('#fm-compose').submit(function(event) {
+          
+          $('#fm-compose button[type=submit]').button('loading');
+          
+          $.post('/compose', $(this).serialize(), function(data) {
+            console.log(data.status);
+            if(data.status == 'OK') {
+              $('.success').removeClass('hide').hide().fadeIn('slow'); // little hack to show alert box in slow fade in
+            } else {
+              $('.fail').removeClass('hide').hide().fadeIn('slow');
+            }
+            
+             $('#fm-compose button[type=submit]').button('reset');
+          }, 'json');
+        
+          event.preventDefault();
+        });
+        
+      });
+    </script>
     
 <%- include footer.ejs %>

@@ -77,6 +77,7 @@ function ensureAuthenticated(req, res, next) {
 
 app.get('/', ensureAuthenticated, routes.outbox); // outbox - index.js
 app.get('/compose', ensureAuthenticated, compose.index);
+app.post('/compose', ensureAuthenticated, compose.compose);
 
 app.get('/login', user.login);
 
