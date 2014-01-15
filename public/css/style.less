@@ -11,10 +11,17 @@
 
 @asphalt: #34495E;
 @darkAsphalt: #2C3E50;
+@red: #fbccd1;
 
 @fontBold: 'blokletters_viltstifviltstift', Arial, Helvetica, sans-serif;
 @fontReg: 'blokletters_balpenbalpen', Arial, Helvetica, sans-serif;
 @fontThin: 'blokletters_potloodpotlood', Arial, Helvetica, sans-serif;
+
+
+/*
+ * Bootstrap overrides
+ */
+
 
 body {
   height: 100%;
@@ -44,7 +51,9 @@ a:hover, a:focus, a:active {
   color: @darkAsphalt;
 }
 
-.btn, .btn:active, .btn:focus {
+.display-none { display:none; }
+
+.btn, .btn:active, .btn:focus, .btn[disabled=disabled] {
   background-color: @baseColor;
   border: 1px solid @fontColor;
   font-family: @fontReg;
@@ -57,6 +66,15 @@ a:hover, a:focus, a:active {
   color: @fontColor;
   border: 1px solid @fontColor;
 }
+
+
+.alert.alert-success, .alert.alert-danger {
+  background-color: transparent;
+  color: @fontColor;
+  font-family: @fontReg;
+}
+.alert.alert-danger { color: @red; }
+.alert.alert-success strong, .alert.alert-danger strong { font-family: @fontBold; }
 
 
 /* 
