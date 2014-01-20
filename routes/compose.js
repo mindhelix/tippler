@@ -1,6 +1,9 @@
 var nodemailer = require("nodemailer")
   , fs = require("fs")
-  , pathlib = require("path");
+  , pathlib = require("path")
+  , juice = require('juice')
+  , swig = require('swig')
+  , markdown = require('markdown').markdown;
 
 
 /*
@@ -17,6 +20,10 @@ exports.index = function(req, res) {
  */
 
 exports.compose = function(req, res) {
+  
+  var subject = req.body.mailsub
+    , htmlMessage = markdown.toHTML(req.body.mailmsg); 
+  
   
 	//create SES transport
 	var transport = nodemailer.createTransport("SES", {
@@ -35,14 +42,13 @@ exports.compose = function(req, res) {
 	    to: '"Jinsu Mathew" <jinsu@mindhelix.com>',
 
 	    // Subject of the message
-	    subject: req.body.mailsub, 
+	    subject: subject, 
 
 	    // plaintext body
-	    text: req.body.mailmsg
+	    text: req.body.mailmsg,
 
-		// HTML body
-	   // html:'<p><b>Hello</b> to myself <img src="cid:note@node"/></p>'+
-	     //    '<p>Here\'s a nyan cat for you as an embedded attachment:<br/><img src="cid:nyan@node"/></p>'
+		  // HTML body
+	    html: htmlMessage
 	};
 	
 	//send mail
