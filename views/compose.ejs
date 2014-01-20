@@ -62,7 +62,8 @@
               $('.compose-toasts .alert-danger').show('slow').delay(3000).hide('slow');
             }
             
-             $('#fm-compose button[type=submit]').button('reset');
+            document.getElementById('fm-compose').reset();
+            $('#fm-compose button[type=submit]').button('reset');
           }, 'json');
         
           event.preventDefault();
