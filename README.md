@@ -1,6 +1,6 @@
 # Tippler
 
-Markdown mailer for your products. When you usually build a product there comes a situation you need to relay on third party mailing solutions like Chipmunk for your mailing campaigns or for your newsletters to be send out to your subscribers. For our product [Sentinel](http://sentinelsos.com), we didn't want to used any third party solutions to manage our mailing list, we decided to make use of Amazon SES as our mail servers and we needed a simple interface to create content for mails and send it to our subscribers. So we created Tippler.
+Markdown mailer for your products. When you usually build a product there comes a situation you need to relay on third party mailing solutions like Chipmunk for your mailing campaigns or for your newsletters to be sent out to your subscribers. For our product [Sentinel](http://sentinelsos.com), we didn't want to used any third party solutions to manage our mailing list, we decided to make use of Amazon SES as our mail servers and we needed a simple interface to create content for mails and send it to our subscribers. So we created Tippler.
 
 N.B. [Tippler](http://en.wikipedia.org/wiki/Tippler) is a breed of domestic homing pigeons.  
 ![Tippler](http://upload.wikimedia.org/wikipedia/en/5/55/Harshannon.jpg)  
@@ -31,6 +31,7 @@ Fork it and extend! Give a pull request when you think you have created some awe
 * Clone Tippler ```git clone git@github.com:mindhelix/tippler.git```
 * Install dependent node modules ```cd tippler``` and ```npm install```
 * Run tippler ```node app.js``` 
+
 
 - A default email compatible template with internal style is provided: ```templates/email-tpl.html```. Edit this template or add your our templates with different styles to suit your needs. The template is passed to the swig template engine in ```compose.js``` file in ```routes```
 
