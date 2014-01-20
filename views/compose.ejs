@@ -11,6 +11,10 @@
           
           <form id="fm-compose" role="form" action="/compose" method="post">
             <div class="form-group">
+              <label for="emailSubject">Subject</label>
+              <input type="text" class="form-control" name="mailsub" placeholder="Email subject goes here">
+            </div>
+            <div class="form-group">
               <label for="emailMsg">Message</label>
               <textarea class="form-control" rows="7" name="mailmsg" placeholder="Create content with markdown"></textarea>
               <p class="help-block">

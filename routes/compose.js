@@ -35,7 +35,7 @@ exports.compose = function(req, res) {
 	    to: '"Jinsu Mathew" <jinsu@mindhelix.com>',
 
 	    // Subject of the message
-	    subject: 'Sentinel Test Mail', 
+	    subject: req.body.mailsub, 
 
 	    // plaintext body
 	    text: req.body.mailmsg
