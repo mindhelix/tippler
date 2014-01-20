@@ -27,8 +27,8 @@ exports.compose = function(req, res) {
   
 	//create SES transport
 	var transport = nodemailer.createTransport("SES", {
-	    AWSAccessKeyID: "AKIAJYZCRKQOMTUOA6HQ",
-	    AWSSecretKey: "0/dJsLbGiYNSQEKDpM7Um84TF7oydthvePBaTSRc"
+	    AWSAccessKeyID: "Put your AWS Access Key here",
+	    AWSSecretKey: "Put your AWS Secret Key here"
 	});
   
   // using swig template to insert content
@@ -41,11 +41,11 @@ exports.compose = function(req, res) {
     	// Message object
     	var message = {
 
-    	    // sender info
-    	    from: 'Sentinel <developers@mindhelix.com>',
+    	    // sender info / your ses registered sender email id
+    	    from: 'John Doe <johndoe@tippler.com>',
 
     	    // Comma separated list of recipients
-    	    to: '"Jinsu Mathew" <jinsu@mindhelix.com>',
+    	    to: 'Amy Jane <amyjane@tippler.com>',
 
     	    // Subject of the message
     	    subject: subject, 
@@ -73,32 +73,3 @@ exports.compose = function(req, res) {
   });
 	
 };
-
-
-
-/*
- * swig it up
- */
-
-/*exports.swiging = function(req, res) {
-  // some markdown before swig
-  var content = markdown.toHTML("Hello *World*!");
-  
-  swig.renderFile("./templates/emailtpl.html", {  
-    name: "John Doe",
-    content: content,
-    now: new Date()
-  }, function(err, output) {
-    console.log("\nBefore juice...\n" + output);
-    console.log("\nAfter juice...\n");
-    // juice it up
-    var options = {
-      url: 'filePath'
-    }
-    juice.juiceContent(output, options, function(err, html) {
-      console.log(html);
-      res.send("See the console for debugging");
-    });
-  });
-  
-};*/

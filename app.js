@@ -38,7 +38,10 @@ if ('development' == app.get('env')) {
 
 
 /*
- * Passport Local strategy
+ * Optinal Passport Local strategy
+ * 
+ * Extend and make your own strategy, this just include a sample static auth strategy. 
+ * Ya, I know, very bad ethics! - @jinmatt
  */
 
 passport.use(new LocalStrategy(
@@ -64,6 +67,13 @@ passport.deserializeUser(function(id, done) {
   done(null, user);
 });
 
+
+/*
+ * Passport auth ensure call fn
+ *
+ * Call this as middleware for a route if you need to authenticate  
+ */
+
 function ensureAuthenticated(req, res, next) {
   if (req.isAuthenticated()) { return next(); }
   res.redirect('/login')
@@ -75,9 +85,9 @@ function ensureAuthenticated(req, res, next) {
  * routes
  */
 
-app.get('/', ensureAuthenticated, routes.outbox); // outbox - index.js
-app.get('/compose', ensureAuthenticated, compose.index);
-app.post('/compose', ensureAuthenticated, compose.compose);
+app.get('/outbox', routes.outbox); // outbox - index.js
+app.get('/', compose.index);
+app.post('/compose', compose.compose);
 
 app.get('/login', user.login);
 
