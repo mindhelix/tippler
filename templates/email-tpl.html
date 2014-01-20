@@ -1,0 +1,90 @@
+<html>
+<head>
+  <style>
+  
+    body {
+      background-color:#f6f6f6;
+  		font-family: Sans-Serif; 
+  		text-align:left;
+    }
+    
+    .content h1 {
+      font-size:22px;
+			color:#333333;
+			padding:10px;
+			margin:10px 10px 0 10px;
+			border:1px;
+    } 
+    
+    .content p {
+      color:#606060;
+			font-size:13px;
+			line-height:1.5em;
+			padding:10px;
+			margin:0 10px 10px 10px
+    }
+  </style>
+</head>
+<body marginleft="0" marginwidth="0" margintop="0" marginheight="0" offset="0">
+	
+	<table width="100%" bgcolor="#f6f6f6" cellpadding="20" cellspacing="0">
+		<tr valign="top" align="center">
+			<td>
+				<table width="auto" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+					
+					<tr align="left"><!-- Row 1 - content -->
+						<td>
+							<div class="content">
+                {{ content|raw }}
+              </div>
+						</td>
+					</tr><!-- End of row 1 -->
+					
+					<tr><!-- Row 2 - promos -->
+						<td align="center">
+							<p style="color:#555;
+													font-size:13px;
+													line-height:1.5em;
+													padding:10px;
+													margin:0 10px 0 10px">
+								<a 
+									href="https://itunes.apple.com/in/app/sentinel-personal-security/id590671912?mt=8" 
+									target="_blank"
+									style="text-decoration:none">
+									<img src="https://s3.amazonaws.com/sentinel-s3-common/images/App_Store_Badge.png" width="170" height="55" 
+									alt="Download Sentinel from Apple App Store">
+								</a>
+								<a 
+									href="https://play.google.com/store/apps/details?id=com.mindhelix.sentinel" 
+									target="_blank"
+									style="text-decoration:none">
+									<img src="https://s3.amazonaws.com/sentinel-s3-common/images/Play_Store_Badge.png" width="170" height="55" 
+									alt="Download Sentinel from Apple App Store">
+								</a>
+							</p>
+						</td>
+					</tr><!-- End of row 3 -->
+					
+					<tr><!-- Row 4 - footer -->
+						<td>
+							<p style="color:#606060;
+									text-align:center;
+									font-size:11px;
+									line-height:1.5em;
+									padding:10px;
+									margin:10px">
+									Copyright &copy; 2013 Sentinel | Mindhelix Technosol Pvt. Ltd.<br>
+									Mindhelix Technosol Pvt. Ltd., Stratup Village, Kinfra Hi-Tech Park, Kochi 683503, India<br>
+									<a style="color:#808080"
+									href="mailto:info@mindhelix.com">info@mindhelix.com</a> | 
+									<a style="color:#808080" target="_blank" 
+									href="http://sentinelsos.com">sentinelsos.com</a>
+							</p>
+						</td>
+					</tr><!-- End of row 4 -->
+				</table>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
