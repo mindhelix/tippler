@@ -11,7 +11,10 @@
     "passport": "latest",
     "passport-local": "latest",
     "connect-flash": "latest",
-    "nodemailer": "latest"
+    "nodemailer": "latest",
+    "juice": "0.4.x",
+    "swig": "1.2.x",
+    "markdown": ">=0.5.x"
   },
   "devDependencies": {
     "grunt": "~0.4.x",

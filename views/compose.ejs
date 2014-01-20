@@ -55,7 +55,7 @@
           $('#fm-compose button[type=submit]').button('loading');
           
           $.post('/compose', $(this).serialize(), function(data) {
-            console.log(data.status);
+            
             if(data.status == 'OK') {
               $('.compose-toasts .alert-success').show('slow').delay(2500).hide('slow'); 
             } else {
