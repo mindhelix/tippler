@@ -35,9 +35,9 @@ Fork it and extend! Give a pull request when you think you have created some awe
 * The local node server port is set to ```3000``` by default. Change it in the ```app.js``` file if you need to.
 
 
-N.B.: We know Tippler needs a config file badly, to set the AWS keys, server port, etc. We will try to add ASAP in the next push. Our if you can contribute we are cool! We have our hands full these days.
+N.B.: We know Tippler needs a config file badly, to set the AWS keys, server port, etc. We will try to add ASAP in the next push. Or if you can contribute, we are cool with it! as we have our hands full these days.
 
-- A default email compatible template with internal style is provided: ```templates/email-tpl.html```. Edit this template or add your our templates with different styles to suit your needs. The template is passed to the swig template engine in ```compose.js``` file in ```routes```
+- A default email compatible template with internal style is provided: ```templates/email-tpl.html```. Edit this template or add your own templates with different styles to suit your needs. The template is passed to the swig template engine in ```compose.js``` file in ```routes```
 
 
 \- [@jinmatt](https://github.com/jinmatt)
