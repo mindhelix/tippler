@@ -3,7 +3,8 @@ var nodemailer = require("nodemailer")
   , pathlib = require("path")
   , juice = require('juice')
   , swig = require('swig')
-  , markdown = require('markdown').markdown;
+  , markdown = require('markdown').markdown
+  , config = require('../config/config');
 
 
 /*
@@ -27,8 +28,8 @@ exports.compose = function(req, res) {
   
 	//create SES transport
 	var transport = nodemailer.createTransport("SES", {
-	    AWSAccessKeyID: "Put your AWS Access Key here",
-	    AWSSecretKey: "Put your AWS Secret Key here"
+	    AWSAccessKeyID: config.AWS_ACCESS_KEY,
+	    AWSSecretKey: config.AWS_SECRET_KEY
 	});
   
   // using swig template to insert content

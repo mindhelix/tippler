@@ -5,6 +5,7 @@
 
 var express = require('express')
   , routes = require('./routes')
+  , config = require('./config/config')
   , user = require('./routes/user')
   , compose = require('./routes/compose')
   , http = require('http')
@@ -16,7 +17,7 @@ var express = require('express')
 var app = express();
 
 // all environments
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || config.PORT);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.use(express.favicon());
