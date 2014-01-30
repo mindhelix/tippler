@@ -15,7 +15,7 @@ Image source: [Wikipedia](http://en.wikipedia.org/wiki/Tippler)
 
 ## Contribute
 
-Extend Tippler to suit your needs, by default Tippler used Amazon SES to send mails and a preset sender email id and recipient email id. Extend this project as you wish to load automatically your users from your mailing list as recipients and your own choice of mail server instead of Amazon SES. 
+Extend Tippler to suit your needs, by default Tippler uses Amazon SES to send emails. Extend this project as you wish to load automatically your users from your mailing list as recipients and your own choice of mail server instead of Amazon SES. 
 
 ### Dependent Node modules:
 
