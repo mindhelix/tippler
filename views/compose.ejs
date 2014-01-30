@@ -11,6 +11,10 @@
           
           <form id="fm-compose" role="form" action="/compose" method="post">
             <div class="form-group">
+              <label for="emailTo">To</label>
+              <input type="text" class="form-control" name="mailto" placeholder="Comma separated list of recipients">
+            </div>
+            <div class="form-group">
               <label for="emailSubject">Subject</label>
               <input type="text" class="form-control" name="mailsub" placeholder="Email subject goes here">
             </div>

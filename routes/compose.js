@@ -22,7 +22,8 @@ exports.index = function(req, res) {
 
 exports.compose = function(req, res) {
   
-  var subject = req.body.mailsub
+  var recipients = req.body.mailto
+    , subject = req.body.mailsub
     , htmlMessage = markdown.toHTML(req.body.mailmsg); 
   
   
@@ -45,7 +46,7 @@ exports.compose = function(req, res) {
     	    from: config.SENDER_ID,
 
     	    // Comma separated list of recipients
-    	    to: 'Amy Jane <amyjane@dispostable.com>',
+    	    to: recipients,
 
     	    // Subject of the message
     	    subject: subject, 
