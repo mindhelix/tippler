@@ -26,7 +26,7 @@ exports.compose = function(req, res) {
     , htmlMessage = markdown.toHTML(req.body.mailmsg); 
   
   
-	//create SES transport
+	// create SES transport
 	var transport = nodemailer.createTransport("SES", {
 	    AWSAccessKeyID: config.AWS_ACCESS_KEY,
 	    AWSSecretKey: config.AWS_SECRET_KEY
@@ -41,12 +41,11 @@ exports.compose = function(req, res) {
     juice.juiceContent(output, options, function(err, html) {
     	// Message object
     	var message = {
-
-    	    // sender info / your ses registered sender email id
-    	    from: 'John Doe <johndoe@tippler.com>',
+    	    // sender info
+    	    from: config.SENDER_ID,
 
     	    // Comma separated list of recipients
-    	    to: 'Amy Jane <amyjane@tippler.com>',
+    	    to: 'Amy Jane <amyjane@dispostable.com>',
 
     	    // Subject of the message
     	    subject: subject, 
@@ -72,5 +71,4 @@ exports.compose = function(req, res) {
     });
     
   });
-	
 };
